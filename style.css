@@ -1,0 +1,369 @@
+
+/* =================================
+   EMPLOYEE SOCIAL NETWORK SYSTEM
+   MODERN CORPORATE DESIGN
+================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #dc2626;
+    --primary-dark: #b91c1c;
+    --primary-light: #fee2e2;
+    --dark: #172033;
+    --text: #334155;
+    --muted: #64748b;
+    --background: #f4f6fa;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --shadow: 0 8px 30px rgba(15, 23, 42, 0.07);
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(
+        135deg,
+        #991b1b,
+        #dc2626,
+        #ef4444
+    );
+    color: white;
+    text-align: center;
+    padding: 38px 20px;
+    box-shadow: 0 5px 20px rgba(153, 27, 27, 0.2);
+}
+
+header h1 {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 15px;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+/* MAIN CONTAINER */
+
+main {
+    max-width: 1150px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+/* MAIN PANEL */
+
+.panel {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* HEADINGS */
+
+h2 {
+    color: var(--dark);
+    font-size: 25px;
+    font-weight: 750;
+    margin-bottom: 18px;
+}
+
+h3 {
+    color: var(--dark);
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    margin-bottom: 25px;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+nav button {
+    margin: 0;
+    flex: 0 0 auto;
+}
+
+/* BUTTONS */
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 19px;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(220, 38, 38, 0.2);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* INPUT FIELDS */
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    margin: 12px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: #ffffff;
+    color: var(--dark);
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.10);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #94a3b8;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* LOGIN SECTION */
+
+#loginSection {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 35px;
+}
+
+#loginSection h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#loginSection button {
+    min-width: 110px;
+    margin: 8px 0;
+}
+
+#loginSection small {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--muted);
+}
+
+/* EMPLOYEE CARDS */
+
+.employee-card,
+.post-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 20px;
+    margin: 13px 0;
+    transition: all 0.25s ease;
+}
+
+.employee-card:hover,
+.post-card:hover {
+    border-color: #fca5a5;
+    box-shadow: 0 7px 20px rgba(15, 23, 42, 0.06);
+    transform: translateY(-2px);
+}
+
+.employee-card h3,
+.post-card h3 {
+    color: var(--dark);
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.employee-card p,
+.post-card p {
+    color: var(--text);
+    margin: 8px 0;
+}
+
+.employee-card b {
+    color: var(--dark);
+}
+
+/* ANNOUNCEMENTS */
+
+.post-card {
+    border-left: 4px solid var(--primary);
+}
+
+.post-card button {
+    margin: 5px 5px 5px 0;
+}
+
+/* PROFILE */
+
+#profileDetails {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 18px;
+}
+
+#profileDetails p {
+    margin: 9px 0;
+}
+
+/* ADMIN DASHBOARD */
+
+#employeeCount {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 17px 20px;
+    border-radius: 12px;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* SEARCH RESULTS */
+
+#searchResults,
+#directoryResults,
+#adminResults,
+#feedResults {
+    margin-top: 18px;
+}
+
+/* LOGIN MESSAGE */
+
+#loginMessage {
+    color: #dc2626;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* SMALL TEXT */
+
+small {
+    color: var(--muted);
+}
+
+/* HIDDEN ELEMENTS */
+
+[hidden] {
+    display: none !important;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 28px 15px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .panel {
+        padding: 20px;
+        border-radius: 13px;
+    }
+
+    nav {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    nav button {
+        flex: 1 1 40%;
+        padding: 11px 8px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    #loginSection {
+        padding: 25px 20px;
+    }
+
+    .employee-card,
+    .post-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    nav button {
+        flex: 1 1 100%;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+}

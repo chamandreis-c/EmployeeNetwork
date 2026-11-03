@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Social Network</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Employee Social Network</h1>
+        <p>Connect. Communicate. Find Employees.</p>
+    </header>
+
+    <main>
+        <!-- LOGIN -->
+        <section id="loginSection" class="panel">
+            <h2>Login</h2>
+
+            <input id="loginId" placeholder="Employee ID or admin">
+            <input id="loginPassword" type="password"
+                   placeholder="Password">
+
+            <button onclick="login()">Login</button>
+            <p id="loginMessage"></p>
+
+            <small>Demo: EMP001 / 1234</small><br>
+            <small>Admin: admin / admin123</small>
+        </section>
+
+        <!-- MAIN MENU -->
+        <section id="appSection" class="panel" hidden>
+            <h2 id="welcome"></h2>
+
+            <nav>
+                <button onclick="showPage('searchPage')">Find Employee</button>
+                <button onclick="showPage('directoryPage')">Directory</button>
+                <button onclick="showPage('feedPage')">Announcement</button>
+                <button onclick="showPage('profilePage')">My Profile</button>
+                <button id="adminButton"
+                        onclick="showPage('adminPage')" hidden>
+                    Admin Dashboard
+                </button>
+                <button onclick="logout()">Logout</button>
+            </nav>
+
+            <!-- SEARCH -->
+            <section id="searchPage" class="page">
+                <h2>Find an Employee</h2>
+
+                <input id="searchInput"
+                       placeholder="Name, job title, or department"
+                       oninput="searchEmployees()">
+
+                <div id="searchResults"></div>
+            </section>
+
+            <!-- DIRECTORY -->
+            <section id="directoryPage" class="page" hidden>
+                <h2>Employee Directory</h2>
+                <div id="directoryResults"></div>
+            </section>
+
+            <!-- ANNOUNCEMENT -->
+            <section id="feedPage" class="page" hidden>
+                <h2>Announcement</h2>
+
+                <textarea id="postInput"
+                          placeholder="Share an update..."></textarea>
+
+                <button onclick="createPost()">Post Update</button>
+                <div id="feedResults"></div>
+            </section>
+
+            <!-- PROFILE -->
+            <section id="profilePage" class="page" hidden>
+                <h2>My Profile</h2>
+                <div id="profileDetails"></div>
+                <input id="newName" placeholder="Enter new name">
+                <button onclick="updateProfile()">Update Name</button>
+            </section>
+
+            <!-- ADMIN -->
+            <section id="adminPage" class="page" hidden>
+                <h2>Admin Dashboard</h2>
+                <p id="employeeCount"></p>
+                <div id="adminResults"></div>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
